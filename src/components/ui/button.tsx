@@ -18,9 +18,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        // PartyDrop custom variants - exact match to reference
+        // PartyDrop custom variants - darker theme to match reference
         hero: "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 font-bold transition-all duration-200",
-        glass: "bg-white/6 text-foreground border border-white/8 backdrop-blur-sm hover:bg-white/10 shadow-elegant transition-all duration-200",
+        glass: "bg-white/4 text-foreground border border-white/8 backdrop-blur-sm hover:bg-white/8 shadow-lg transition-all duration-200",
       },
       size: {
         default: "h-10 px-4 py-2",
