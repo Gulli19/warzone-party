@@ -8,66 +8,66 @@
 
 @layer base {
   :root {
-    /* Core backgrounds - Very dark like original */
-    --background: 220 39% 4%;     /* Much darker #0a0b0f */
-    --background-soft: 220 35% 5%; /* #0c0e14 */
-    --surface: 220 30% 8%;        /* #131620 */
+    /* Core backgrounds */
+    --background: 218 37% 7%;     /* #0b0e13 */
+    --background-soft: 218 30% 9%; /* #0f141c */
+    --surface: 218 25% 12%;       /* #121826 */
     
     /* Text colors */
-    --foreground: 220 15% 95%;    /* Almost white #f1f2f4 */
-    --muted-foreground: 220 10% 70%; /* #aeb1ba */
+    --foreground: 218 25% 92%;    /* #e6e9ef */
+    --muted-foreground: 218 15% 68%; /* #a9b1c3 */
     
-    /* Primary gradient colors (blue to purple) - matching exact reference */
-    --primary: 225 100% 70%;      /* #6d8cff */
-    --primary-secondary: 248 90% 70%; /* #8a5bff */
+    /* Primary gradient colors (blue to purple) */
+    --primary: 225 100% 71%;      /* #6d8cff */
+    --primary-secondary: 248 100% 67%; /* #8a5bff */
     --primary-foreground: 0 0% 100%;
     
     /* Accent colors */
-    --accent: 167 85% 55%;       /* Slightly adjusted green */
+    --accent: 167 100% 49%;       /* #20d6a8 */
     --accent-foreground: 0 0% 100%;
     
-    /* Card and surface colors - darker */
-    --card: 220 30% 8%;          /* Very dark cards */
-    --card-foreground: 220 15% 95%;
+    /* Card and surface colors */
+    --card: 218 25% 12%;
+    --card-foreground: 218 25% 92%;
     
-    /* Secondary elements - more transparent */
-    --secondary: 0 0% 100% / 0.04;
-    --secondary-foreground: 220 15% 95%;
+    /* Secondary elements */
+    --secondary: 0 0% 100% / 0.06;
+    --secondary-foreground: 218 25% 92%;
     
     /* Muted elements */
-    --muted: 0 0% 100% / 0.04;
+    --muted: 0 0% 100% / 0.06;
     
-    /* Borders and inputs - very subtle */
-    --border: 0 0% 100% / 0.06;
-    --input: 0 0% 100% / 0.06;
+    /* Borders and inputs */
+    --border: 0 0% 100% / 0.08;
+    --input: 0 0% 100% / 0.08;
     
     /* Ring focus */
-    --ring: 225 100% 70% / 0.35;
+    --ring: 225 100% 71% / 0.35;
     
     /* Destructive */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
     /* Popover */
-    --popover: 220 30% 8%;
-    --popover-foreground: 220 15% 95%;
+    --popover: 218 25% 12%;
+    --popover-foreground: 218 25% 92%;
     
     /* Radius */
     --radius: 1.125rem; /* 18px */
     
-    /* Custom gradients and effects - much more subtle */
-    --gradient-primary: linear-gradient(135deg, hsl(225 100% 75%), hsl(248 85% 70%));
-    --gradient-bg: radial-gradient(1200px 600px at 10% -10%, hsl(248 85% 70%) / 0.08, transparent 70%),
-                   radial-gradient(900px 500px at 90% 10%, hsl(225 100% 75%) / 0.08, transparent 70%),
+    /* Custom gradients and effects */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-secondary)));
+    --gradient-bg: radial-gradient(1200px 600px at 10% -10%, hsl(var(--primary-secondary)) / 0.25, transparent 60%),
+                   radial-gradient(900px 500px at 90% 10%, hsl(var(--primary)) / 0.25, transparent 60%),
                    linear-gradient(180deg, hsl(var(--background)), hsl(var(--background-soft)));
     
-    --shadow-elegant: 0 10px 30px hsl(0 0% 0% / 0.5);
+    --shadow-elegant: 0 10px 30px hsl(0 0% 0% / 0.35);
     --shadow-glow: 0 8px 24px hsl(var(--ring));
     --shadow-glow-hover: 0 14px 30px hsl(var(--ring));
     
-    /* Glass effect - more subtle */
-    --glass-bg: hsl(0 0% 100% / 0.04);
-    --glass-border: hsl(0 0% 100% / 0.06);
+    /* Glass effect */
+    --glass-bg: hsl(0 0% 100% / 0.06);
+    --glass-border: hsl(0 0% 100% / 0.08);
     --glass-backdrop: blur(8px);
     
     /* Transition */
@@ -98,29 +98,29 @@
 }
 
 @layer components {
-  /* Glass card component - darker */
+  /* Glass card component */
   .glass-card {
-    background: hsl(0 0% 100% / 0.04);
-    border: 1px solid hsl(0 0% 100% / 0.08);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
     border-radius: var(--radius);
-    box-shadow: 0 10px 30px hsl(0 0% 0% / 0.4);
+    box-shadow: var(--shadow-elegant);
     backdrop-filter: var(--glass-backdrop);
   }
   
-  /* Badge component - darker */
+  /* Badge component */
   .badge-glass {
-    background: hsl(0 0% 100% / 0.06);
-    border: 1px solid hsl(0 0% 100% / 0.1);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
     border-radius: 999px;
-    box-shadow: 0 4px 12px hsl(0 0% 0% / 0.3);
+    box-shadow: var(--shadow-elegant);
     backdrop-filter: var(--glass-backdrop);
   }
   
-  /* Header blur effect - darker */
+  /* Header blur effect */
   .header-blur {
     backdrop-filter: var(--glass-backdrop);
-    background: linear-gradient(180deg, hsl(220 39% 4%) / 0.95, hsl(220 39% 4%) / 0.8);
-    border-bottom: 1px solid hsl(0 0% 100% / 0.08);
+    background: linear-gradient(180deg, hsl(var(--background)) / 0.8, hsl(var(--background)) / 0.35);
+    border-bottom: 1px solid var(--glass-border);
   }
   
   /* Gradient text */

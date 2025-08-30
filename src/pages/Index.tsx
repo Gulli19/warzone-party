@@ -32,7 +32,8 @@ export default function Index() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-8">
                 <h1 className="text-5xl lg:text-6xl font-extrabold font-inter leading-tight">
-                  Battel Royal Party
+                  Battle Royal{" "}
+                  <span className="gradient-text">Party</span>
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
                   Eventi sociali, tornei rapidi e squadre casuali. Gioca con nuovi amici, 
@@ -41,7 +42,7 @@ export default function Index() {
                 <div className="flex flex-wrap gap-4">
                   <Button variant="hero" size="lg" asChild>
                     <a href="https://discord.gg/dvEzHX8nhH" target="_blank" rel="noopener">
-                      Entra ora
+                      Entra ora <ExternalLink className="w-5 h-5" />
                     </a>
                   </Button>
                   <Button variant="glass" size="lg" asChild>
@@ -217,6 +218,36 @@ export default function Index() {
           </div>
         </section>
 
+        {/* Premium CTA */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <Card className="glass-card p-12 text-center max-w-4xl mx-auto">
+              <div className="space-y-6">
+                <Badge variant="accent" className="text-base px-4 py-2">
+                  <Zap className="w-4 h-4 mr-2" />
+                  PartyDrop Premium
+                </Badge>
+                <h2 className="text-4xl font-bold">
+                  Porta il tuo gaming al livello successivo
+                </h2>
+                <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                  Eventi esclusivi, tornei premium, coaching personalizzato e molto altro. 
+                  Scopri tutti i vantaggi del piano Premium.
+                </p>
+                <div className="flex flex-wrap gap-4 justify-center">
+                  <Button variant="hero" size="lg" asChild>
+                    <a href="/pricing">
+                      Scopri i piani <ExternalLink className="w-5 h-5" />
+                    </a>
+                  </Button>
+                  <Button variant="glass" size="lg">
+                    Prova gratuita
+                  </Button>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </section>
       </main>
 
       {/* Footer */}

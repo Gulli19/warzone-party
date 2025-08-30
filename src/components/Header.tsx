@@ -29,15 +29,18 @@ export const Header = () => {
           </div>
           
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" size="sm" asChild>
-              <a href="#eventi" className="text-muted-foreground hover:text-foreground">Calendario</a>
+            <Button variant="glass" size="sm" asChild>
+              <a href="#eventi">Calendario</a>
             </Button>
-            <Button variant="ghost" size="sm" asChild>
-              <a href="#marketplace" className="text-muted-foreground hover:text-foreground">Marketplace</a>
+            <Button variant="glass" size="sm" asChild>
+              <a href="#marketplace">Marketplace</a>
+            </Button>
+            <Button variant="glass" size="sm" asChild>
+              <a href="/pricing">Premium</a>
             </Button>
             <Button variant="hero" size="sm" asChild>
               <a href="https://discord.gg/dvEzHX8nhH" target="_blank" rel="noopener">
-                Discord
+                Discord <ExternalLink className="w-4 h-4" />
               </a>
             </Button>
           </div>
