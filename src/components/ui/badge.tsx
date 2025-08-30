@@ -15,6 +15,9 @@ const badgeVariants = cva(
         destructive:
           "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
         outline: "text-foreground",
+        // PartyDrop custom variants
+        glass: "badge-glass text-muted-foreground font-medium",
+        accent: "bg-accent/20 text-accent border-accent/30 font-medium",
       },
     },
     defaultVariants: {
